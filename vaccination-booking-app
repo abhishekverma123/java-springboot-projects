@@ -1,0 +1,53 @@
+# A developer is creating a Vaccination application that helps users book appointments for different vaccines. He needs help to complete the console application using Spring Boot and concepts of dependency injection.
+ 
+# In this application, the user can choose between three vaccines Covid, Polio, and Typhoid; he can also decide whom he wants to vaccinate father, mother, himself, or spouse.
+
+# After these two selections, the user will add details and book appointments. A user can be vaccinated with a particular vaccine only once.
+
+1. Complete Covid, Polio, and Typhoid classes by overriding the Vaccine interface method, description of the method in the vaccine interface is as follows:
+
+    getType(): This method returns the name of the vaccine in String format example "Covid".
+
+2. Complete the TimeAndLocation class by adding below-mentioned attributes and methods:
+
+    a. String timeSlot
+
+    b. String location
+
+    c. String date
+
+    d. setDetails(String timeSlot, String location, String date): This method takes timeSlot, location, and date as input parameters.
+
+    e. getDetails(): This method returns a string containing the timeslot, location, and date for example: "12:00 AM at New Delhi on 2023-05-22".
+
+3. Complete the Father, Mother, Self, and Spouse classes by
+
+   a. Adding common attributes:
+          
+        1. String name
+
+        2. Integer age
+
+        3. boolean isVaccinated
+
+        4. TimeAndLocation(class), vaccine(interface), both are injected by the constructor method.
+
+        5. The arguments of the constructor for all users should be like "public User(TimeAndLocation timeAndLocation, Vaccine vaccine)"
+
+   b. Override the user interface methods, the description of the methods in the user interface is as follows:
+
+         1. getVaccineDetails(): This method returns the Vaccine object selected by the user in the console.
+
+         2. setUserDetails(String name, int age, TimeAndLocation timeAndLocation): This function sets user details such as name, age, and location.
+
+         3. setAppointment(): This function sets an appointment, updates vaccination status, and prints appointment details in the console example "Hello John your appointment has been fixed for Covid Vaccine on  12 Pm at Mumbai on 2023-05-10".
+
+         4. IsVaccinated(): This function returns a boolean type indicating the vaccination status of a user. If the user is vaccinated it should return true else false.
+
+4. Create beans in ApplicationContext.xml of TimeAndLocation, all vaccines, and all types of users possible. For example, the Father has covid vaccine; the father has the Polio vaccine, etc.
+
+5. In the main() method, load context from the applicationContext.xml file which is located in "src>main>resources".
+
+6. Create a console application that makes vaccine appointments, as the flow chart shows.
+
+7. Test your implementation by running the Main class
