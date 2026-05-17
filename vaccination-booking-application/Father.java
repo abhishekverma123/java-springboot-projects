@@ -28,12 +28,28 @@ public class Father implements User {
         private TimeAndLocation  timeAndLocation;
         private Vaccine vaccine;
         
-            public Father(TimeAndLocation timeAndLocation, Vaccine vaccine){
-            	this.timeAndLocation = timeAndLocation;	
-            	this.vaccine = vaccine;
-            	 this.isVaccinated = false;
-            	
-            }
+        // Using Setter DI 
+        
+        public void setTimeAndLocation(TimeAndLocation timeAndLocation) {
+			this.timeAndLocation = timeAndLocation;
+		}
+      
+        
+        public void setVaccine(Vaccine vaccine) {
+			this.vaccine = vaccine;
+		}
+        // using Constructor DI
+        
+//            public Father(TimeAndLocation timeAndLocation, Vaccine vaccine){
+//            	this.timeAndLocation = timeAndLocation;	
+//            	this.vaccine = vaccine;
+//            	 this.isVaccinated = false;
+//            	
+//            }
+        
+        
+            
+        
 //            @Override
 //            public void setUserTimeLocationDetails(String timeSlot, String location, String date) {
 //    	        this.timeSlot = timeSlot;
@@ -41,6 +57,8 @@ public class Father implements User {
 //    	        this.date = date;
 //       }
             
+	
+
 	@Override
 	public Vaccine getVaccineDetails() {
 		// TODO Auto-generated method stub

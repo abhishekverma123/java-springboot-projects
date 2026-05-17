@@ -25,14 +25,26 @@ public class Self implements User {
      // reference of  Vaccine interface and timeAndLocation class
      private TimeAndLocation  timeAndLocation;
      private Vaccine vaccine;
-	  
      
-	 public Self(TimeAndLocation timeAndLocation,Vaccine vaccine) {
+     // Using Setter DI 
+     
+     public void setTimeAndLocation(TimeAndLocation timeAndLocation) {
+			this.timeAndLocation = timeAndLocation;
+		}
    
-     	this.timeAndLocation = timeAndLocation;	
-      	this.vaccine = vaccine;
-      	 this.isVaccinated = false;
-     }
+     
+     public void setVaccine(Vaccine vaccine) {
+			this.vaccine = vaccine;
+		}
+     // using Constructor DI
+     
+     
+//	 public Self(TimeAndLocation timeAndLocation,Vaccine vaccine) {
+//   
+//     	this.timeAndLocation = timeAndLocation;	
+//      	this.vaccine = vaccine;
+//      	 this.isVaccinated = false;
+//     }
 	 
 //	    public void setUserTimeLocationDetails(String timeSlot, String location, String date) {
 //	        this.timeSlot = timeSlot;
