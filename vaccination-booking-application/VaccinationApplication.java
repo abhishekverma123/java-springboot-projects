@@ -164,14 +164,16 @@ public class VaccinationApplication {
     		 
     		
     		User user = (User) context.getBean(userName + userType); 
-    		
+    		                
     		        if(user.IsVaccinated()) {
+	                    System.out.println("User Ref :"+user);
+	                    
     		              System.out.println("User is already Vaccinated");
     		         }
     		                   
     		         else {
     		System.out.println("Please enter "+userName+" details");
-    	
+    	                    System.out.println("User Ref :"+user);
               
     			System.out.print("Name: ");
     		   String	name = scanner.nextLine();
@@ -179,7 +181,6 @@ public class VaccinationApplication {
     			int age = scanner.nextInt();
 
     			scanner.nextLine();
-
     			 System.out.print("Appointment date (YYYY-MM-DD): ");
     			String userAppointmentDate = scanner.nextLine();
     			 
@@ -196,6 +197,7 @@ public class VaccinationApplication {
     		// TimeAndLocation t1 =  null;
     		TimeAndLocation t1 =
     			    (TimeAndLocation) context.getBean("timeAndLocation");
+    		System.out.println("TimeAndLocation Ref : " + t1);
     		 t1.setDetails(userAppointmentTime, userAppointmentLocation, userAppointmentDate);
     		 user.setUserDetails(name, age, t1);
     		 user.getVaccineDetails();
