@@ -1,0 +1,44 @@
+# MVC-Based User Registration Web Application
+
+A Java web application built using the MVC (Model-View-Controller) architecture pattern. The application allows users to submit a registration form through a JSP-based UI. User data is processed through Controller and Service layers and stored in an in-memory repository implemented using the DAO (Data Access Object) pattern with an ArrayList.
+
+## Features
+
+* MVC Architecture Implementation
+* Layered Design (Controller, Service, Repository, Domain)
+* DAO Pattern for Data Access
+* JSP-based User Interface
+* User Registration Form
+* Form Validation and Submission Handling
+* Success Message after Registration
+* In-Memory Data Storage using ArrayList
+
+## Architecture
+
+* Controller Layer: Handles HTTP requests and responses.
+* Service Layer: Contains business logic.
+* Domain Layer: Represents user entities.
+* Repository Layer: Manages data storage.
+* DAO Layer: Provides abstraction for data access operations.
+* JSP Views: Responsible for user interaction and presentation.
+
+## Application Flow
+
+1. User accesses the registration URL.
+2. User fills out and submits the registration form.
+3. Controller receives the request.
+4. Service layer processes the data.
+5. DAO saves the User object into an ArrayList repository.
+6. Upon successful registration, a success message is displayed to the user.
+7. Stored user data can be retrieved through repository methods.
+
+## Technologies Used
+
+* Java
+* Servlets
+* JSP
+* MVC Architecture
+* DAO Design Pattern
+* Collections Framework (ArrayList)
+* HTML/CSS
+* Apache Tomcat
