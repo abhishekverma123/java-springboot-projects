@@ -1,10 +1,7 @@
-package com.example.Website.repository;
+package com.example.CarService.repository;
 
-import java.util.Optional;
+public interface DAO<T> {
 
-public interface DAO<T>{
-     public Optional<T> get(Integer id);
-     public int save(T t);
-     
-     
+    // Save method simply adds a car into a list and then returns the size of it as CardId.
+    int save(T t);
 }
