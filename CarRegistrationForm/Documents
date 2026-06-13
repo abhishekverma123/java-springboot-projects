@@ -1,0 +1,41 @@
+The Car Service Application, you must now create a form on the signup page. You need to take input from the service provider who is attending to the car. The input could be the Car number, Name, Warranty Coverage, remarks, etc.
+
+
+
+Add the repository and service layer to the current project to save the data and add the business logic. Using the concept of MVC, proceed with the following task:
+
+
+Tasks:-
+
+
+1. Complete the  method for the "/done" path in the existing controller (RegisterController) which should work as mentioned below:
+
+      a.  Write an if-else condition to check the input from the form.
+
+      b. If the conditions in the point above are verified it should return the string "success" for the success page otherwise return the string  "carregister" for going back to the registration page.
+
+2. While auto wiring the Registration interface in RegisterController you need to do the following:
+
+      a. The Registration object should be named as "registration".
+
+      b. Use appropriate annotation to inject the dependency.
+
+3. Complete the service layer by implementing the Registration interface. Do override the required methods with correct annotations.
+ 
+4. Complete the repository layer by implementing the  DAO interface. Do override the required methods with correct annotations.
+
+5. Modify the domain object Car  by using the CarDAO object such that when the  saveVehicleDetails method saves the car it returns a boolean.
+
+6. Make the following changes in the JSP files (refer to screenshots provided below):
+ 
+      a. "carregsiter.jsp" is now a form that accepts the following properties of a car:
+
+          • Car Number as "Registration Number".
+
+          • Car Name as "CarName".
+
+          • Covered In Warranty (YES/NO) as "CarDetails"
+ 
+          • Any remarks as "CarWork".
+
+      b.  Create a new jsp file named "success.jsp" which will be the page for successful registration.
